@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portafolio</title>
+  <style>
+    :root{--accent:#0b6efd;--bg:#f7f8fb}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:0;background:var(--bg);color:#111}
+    header{background:#fff;padding:24px 16px;box-shadow:0 2px 8px rgba(0,0,0,.06);text-align:center}
+    main{max-width:900px;margin:28px auto;padding:0 16px}
+    h1{margin:0;font-size:1.6rem}
+    .grid{display:grid;gap:16px;margin-top:20px}
+    @media(min-width:700px){.grid{grid-template-columns:repeat(2,1fr)}}
+    .card{background:#fff;padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(12,17,43,.06)}
+    .card h2{margin:0 0 6px 0;font-size:1.1rem}
+    .meta{font-size:.9rem;color:#555;margin-bottom:10px}
+    .actions a{display:inline-block;padding:8px 12px;border-radius:8px;text-decoration:none;background:var(--accent);color:#fff;font-weight:600}
+    footer{text-align:center;color:#666;font-size:.9rem;margin:30px 0 60px}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Portafolio</h1>
+    <p style="margin:.6rem 0;color:#555">Tres trabajos destacados — haz clic en "Ver trabajo" para abrirlos.</p>
+  </header>
+
+  <main>
+    <div class="grid">
+      <article class="card">
+        <h2>Trabajo 1 — Título aquí</h2>
+        <div class="meta">Breve descripción del trabajo 1: qué hiciste, herramientas, año.</div>
+        <div class="actions">
+          <a href="https://drive.google.com/file/d/19QbHVyE8YIKzr5FkB-_NjAZIKBBE1ntu/view?usp=sharing" target="_blank" rel="noopener">Ver trabajo</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>Trabajo 2 — Título aquí</h2>
+        <div class="meta">Breve descripción del trabajo 2.</div>
+        <div class="actions">
+          <a href="https://drive.google.com/file/d/1Iebnr8hpHaFIVYlUx5ro0uou2ea8B5yl/view?usp=sharing" target="_blank" rel="noopener">Ver trabajo</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>Trabajo 3 — Título aquí</h2>
+        <div class="meta">Breve descripción del trabajo 3.</div>
+        <div class="actions">
+          <a href="https://drive.google.com/file/d/1LP5N8X6yBfLqoKnLNoJqQUJGcieDAMzG/view?usp=sharing" target="_blank" rel="noopener">Ver trabajo</a>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    © <span id="anio"></span> — Tu nombre.  
+    <script>document.getElementById('anio').textContent = new Date().getFullYear()</script>
+  </footer>
+</body>
+</html>
